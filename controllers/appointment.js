@@ -1,4 +1,4 @@
-knexconst knex = require('../db/')
+const knex = require('../db/')
 
 exports.getAllAppointments = function (req, res) {
     knex('appointments')
