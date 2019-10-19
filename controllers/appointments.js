@@ -1,4 +1,4 @@
-const knex = require('../db/')
+const knex = require('../db/knex')
 
 exports.getAllAppointments = function (req, res) {
     knex('appointments')
@@ -11,7 +11,7 @@ exports.getOneAppointment = function (req, res) {
         .then(appointments => res.json(appointments))
 }   
 
-exports.addOneBook = function (req, res) {
+exports.addOneAppointment = function (req, res) {
     knex('appointments')
         .insert(req.body)
         .returning('*')
